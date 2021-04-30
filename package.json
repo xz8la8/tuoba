@@ -1,0 +1,29 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "start": "dumi dev",
+    "pack": "father-build",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean -y",
+    "test": "npm run test:unit",
+    "test:unit": "umi-test \"test.(j|t)s\" --coverage",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty \"./packages\""
+  },
+  "resolutions": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@umijs/fabric": "^2.5.7",
+    "@umijs/test": "^3.4.11",
+    "babel-plugin-import": "^1.13.3",
+    "dumi": "^1.1.16",
+    "father-build": "^1.19.4",
+    "lerna": "^4.0.0"
+  }
+}
